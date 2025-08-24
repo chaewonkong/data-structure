@@ -76,7 +76,7 @@ func (t *Tree) RemoveNode(node *TreeNode) {
 	}
 
 	// two children
-	// 1. successor 찾기
+	// 1. successor 찾기: node.Right의 모든 재귀적인 자식 노드들 중 가장 작은 node를 찾고 node의 위치에 바꿔치기
 	successor := node.Right
 	for successor.Left != nil {
 		successor = successor.Left
